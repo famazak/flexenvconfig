@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "flexenvconfig"
+version = "0.1.0"
+description = "An abstract configuration object used to facilitate building flexible configs from environment variables"
+authors = ["famazak <zakfama58@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver"
+version_provider = "poetry"
+update_changelog_on_bump = true
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
