@@ -13,7 +13,7 @@ class BaseFlexEnvConfig(ABC):
         pass
 
     @classmethod
-    def get_env(cls, key: str, default: str) -> str:
+    def get_env(cls, key: str, default: Optional[str] = None) -> Optional[str]:
         """
         Helper method to fetch values from the environment when building config
         objects
