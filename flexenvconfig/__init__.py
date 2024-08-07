@@ -1,7 +1,7 @@
 import os
 from typing import Optional, TypeVar
 
-from abs import ABC, abstractmethod
+from abc import ABC, abstractmethod
 
 
 class BaseFlexEnvConfig(ABC):
