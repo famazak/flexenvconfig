@@ -9,12 +9,12 @@ from flexenvconfig import BaseFlexEnvConfig
 
 class MongoDBConfig(BaseFlexEnvConfig):
     def __init__(self) -> None:
-        self.MONGO_DB_NAME = self.get_env("MONGO_DB_NAME", "testdb")
-        self.MONGO_DB_HOST = self.get_env("MONGO_DB_HOST", "localhost")
-        self.MONGO_DB_PORT = int(self.get_env("MONGO_DB_PORT", "12345"))
-        self.MONGO_DB_USERNAME = self.get_env("MONGO_DB_USERNAME", "mongouser")
-        self.MONGO_DB_PASSWORD = self.get_env("MONGO_DB_PASSWORD", "mongopassword")
-        self.OPTIONAL_CONFIG = self.get_env("OPTIONAL_CONFIG")
+        self.MONGO_DB_NAME = MongoDBConfig.get_env("MONGO_DB_NAME", "testdb")
+        self.MONGO_DB_HOST = MongoDBConfig.get_env("MONGO_DB_HOST", "localhost")
+        self.MONGO_DB_PORT = int(MongoDBConfig.get_env("MONGO_DB_PORT", "12345"))
+        self.MONGO_DB_USERNAME = MongoDBConfig.get_env("MONGO_DB_USERNAME", "mongouser")
+        self.MONGO_DB_PASSWORD = MongoDBConfig.get_env("MONGO_DB_PASSWORD", "mongopassword")
+        self.OPTIONAL_CONFIG = MongoDBConfig.get_env("OPTIONAL_CONFIG")
 
     def validate(self) -> bool:
         return all([self.MONGO_DB_NAME, self.MONGO_DB_HOST, self.MONGO_DB_PORT, self.MONGO_DB_USERNAME, self.MONGO_DB_PASSWORD])

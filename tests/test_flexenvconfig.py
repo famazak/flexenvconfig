@@ -6,8 +6,8 @@ from flexenvconfig import BaseFlexEnvConfig
 
 class TestConfig(BaseFlexEnvConfig):
     def __init__(self):
-        self.test_value = self.get_env("TEST_ENV_VAR", "test value")
-        self.no_value = self.get_env("ENV_VAR_NO_VALUE")
+        self.test_value = TestConfig.get_env("TEST_ENV_VAR", "test value")
+        self.no_value = TestConfig.get_env("ENV_VAR_NO_VALUE")
 
     def validate(self) -> bool:
         return all([self.test_value])
