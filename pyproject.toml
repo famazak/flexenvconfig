@@ -4,6 +4,8 @@ version = "0.1.0"
 description = "An abstract configuration object used to facilitate building flexible configs from environment variables"
 authors = ["famazak <zakfama58@gmail.com>"]
 readme = "README.md"
+homepage = "https://github.com/famazak/flexenvconfig"
+repository = "https://github.com/famazak/flexenvconfig"
 
 [tool.poetry.dependencies]
 python = "^3.11"
