@@ -21,3 +21,10 @@ class MongoDBConfig(BaseFlexEnvConfig):
 ```
 
 `BaseFlexEnvConfig`'s constructor defines the configs which gets sourced from the environment when implemented.  When implemented, the `validate` method is used to validate that a config object contains the required values.
+
+## Development
+You'll need poetry and Python 3.11+.  Clone the repo and then run `poetry install`
+
+Then you'll need to install the pre-commit hooks: `poetry run pre-commit install`
+
+You can run the test suite using `make test` and you can manually lint the project using `make lint`
