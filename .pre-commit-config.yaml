@@ -1,0 +1,9 @@
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.4.4
+    hooks:
+      - id: ruff
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: '' # Use the sha / tag you want to point at
+    hooks:
+      - id: mypy

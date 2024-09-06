@@ -13,3 +13,7 @@ build:
 .PHONY: publish
 publish:
 	poetry publish --build
+
+.PHONY: lint
+lint:
+	poetry run mypy flexenvconfig;  poetry run ruff check flexenvconfig
